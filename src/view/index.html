@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	{% if isProd %}
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	{% endif %}
+	<title>墨方</title>
+	<link rel="shortcut icon" href="https://sinan.tongdun.me/cdn/bucket/20191127134944493_favicon.png"
+		type="image/x-icon" />
+</head>
+
+<body>
+	<div id="root"></div>
+	<!-- <script src="{{preludeDomain}}.tongdun.cn/prelude-loader?app=tnt_cli_identify-node&bundle=default&version=*"></script> -->
+	<!-- <script src="{{preludeDomain}}.tongdun.cn/prelude-loader?app=okr-react&bundle=prod&version=*"></script> -->
+	<!-- <script>
+		const params = {}
+		params.callbackUrl = params.callbackUrl || location.href;
+		window.location.href = `http://login-inner-dev.tongdun.cn:8088/userLogin.htm?tokenEncoding=true&callbackUrl=${params.callbackUrl}`;
+	</script> -->
+
+</body>
+
+</html>
