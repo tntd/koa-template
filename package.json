@@ -8,6 +8,7 @@
 		"start": "nodemon --inspect=9990 -e js,json,yaml -w src src/server.js"
 	},
 	"dependencies": {
+		"@tntd/sso-login": "^1.0.1",
 		"app-module-path": "^2.2.0",
 		"axios": "^0.19.0",
 		"body-parser": "^1.15.1",

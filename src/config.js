@@ -2,16 +2,16 @@ const config = {
 	development: {
 		preludeDomain: 'http://prelude-dev',
 		loginUrl: 'http://login-inner-dev.tongdun.cn:8088/userLogin.htm',
+		ehrapi: { // 公司Ehr申请token
+			host: 'http://192.168.8.66:88',
+			token: 'xxxx'
+		},
 		port: 8889,
 		redis: {
 			host: '127.0.0.1',
 			port: 6379,
 			password: 'xxxx',
 			db: 1
-		},
-		ehrapi: { // 公司Ehr申请token
-			host: 'http://192.168.8.66:88',
-			token: 'xxxx'
 		},
 		mysql: {
 			database: 'xxxx',
@@ -24,16 +24,16 @@ const config = {
 	'dev-common': {
 		preludeDomain: 'http://prelude-dev',
 		loginUrl: 'http://login-inner-dev.tongdun.cn:8088/userLogin.htm',
+		ehrapi: {
+			host: 'http://192.168.8.66:88',
+			token: 'xxxx'
+		},
 		port: 8088,
 		redis: {
 			host: '127.0.0.1',
 			port: 6379,
 			password: 'xxxx',
 			db: 1
-		},
-		ehrapi: {
-			host: 'http://192.168.8.66:88',
-			token: 'xxxx'
 		},
 		mysql: {
 			database: 'xxxx',
@@ -46,16 +46,16 @@ const config = {
 	staging: {
 		preludeDomain: 'https://prelude',
 		loginUrl: 'https://login-inner.tongdun.cn/userLogin.htm',
+		ehrapi: {
+			host: 'http://192.168.121.156',
+			token: 'xxxx'
+		},
 		port: 8088,
 		redis: {
 			host: '127.0.0.1',
 			port: 6379,
 			password: 'xxxx',
 			db: 0
-		},
-		ehrapi: {
-			host: 'http://192.168.121.156',
-			token: 'xxxx'
 		},
 		mysql: {
 			database: 'xxxx',
@@ -68,16 +68,16 @@ const config = {
 	production: {
 		preludeDomain: 'https://prelude',
 		loginUrl: 'https://login-inner.tongdun.cn/userLogin.htm',
+		ehrapi: {
+			host: 'http://192.168.121.156',
+			token: 'xxxx'
+		},
 		port: 8088,
 		redis: {
 			host: '127.0.0.1',
 			port: 6379,
 			password: 'xxxx',
 			db: 0
-		},
-		ehrapi: {
-			host: 'http://192.168.121.156',
-			token: 'xxxx'
 		},
 		mysql: {
 			database: 'xxxx',

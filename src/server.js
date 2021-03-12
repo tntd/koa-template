@@ -2,6 +2,7 @@ require('app-module-path/register');
 
 const Koa = require('koa');
 const koabody = require('koa-body');
+const ssoLogin = require('@tntd/sso-login');
 
 const config = require('./config');
 const env = process.env.NODE_ENV || 'development';
@@ -12,6 +13,7 @@ const healthCheck = require('./middlewares/health-check');
 const sessionRedis = require('./middlewares/session-redis');
 const tplRender = require('./middlewares/tpl-render');
 const checkToken = require('./middlewares/check-token');
+const formatSession = require('./middlewares/format-session');
 
 const pkg = require('../package.json');
 
@@ -28,6 +30,8 @@ app.keys = [`${pkg.group}-${pkg.name}`];
 
 app.use(healthCheck());
 app.use(sessionRedis());
+app.use(ssoLogin(config[env]));
+app.use(formatSession());
 app.use(checkToken());
 
 app.use(
