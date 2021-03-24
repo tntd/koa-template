@@ -8,6 +8,7 @@ const config = require('./config');
 const env = process.env.NODE_ENV || 'development';
 
 global.M = require('./models')(config[env].mysql);
+global.schedules = require('./schedule')();
 
 const healthCheck = require('./middlewares/health-check');
 const sessionRedis = require('./middlewares/session-redis');
@@ -37,9 +38,11 @@ app.use(checkToken());
 app.use(
 	koabody({
 		multipart: true,
-		strict: false,
+		// strict: false,
+		parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE', 'GET'],
 		formidable: {
-			keepExtensions: true
+			keepExtensions: true,
+			uploadDir: path.join(__dirname, './uploads')
 		}
 	})
 );
